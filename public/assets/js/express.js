@@ -1,10 +1,12 @@
 const path = require("path");
 const express = require("express");
 const app = express();
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 3100;
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
+
+app.use(express.static('public'));
 
 const notes = [
     {id: 1, name: 'note1'},
@@ -12,22 +14,14 @@ const notes = [
     {id: 3, name: 'note3'}
 ];
 
-app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, "../html/index.html"));
-});
-
-app.get('/notes', (req, res) => {
-    res.sendFile(path.join(__dirname, "../html/notes.html"));
-});
-
 app.get('/api/notes', (req, res) => {
-    res.send(notes);
+    res.json(notes);
 });
 
 app.get('/api/notes/:id', (req, res) => {
     const note = notes.find(c => c.id === parseInt(req.params.id));
     if (!note) res.status(404).send("The note with the given ID not found");
-    res.send(note);
+    res.json(note);
 });
 
 app.post('/api/notes', (req, res) => {
@@ -63,7 +57,7 @@ app.delete('/api/notes/:id', (req, res) => {
     //Return response
     res.send(note);
 
-})
+});
 
 
 
