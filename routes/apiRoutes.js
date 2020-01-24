@@ -46,7 +46,7 @@ module.exports = function (app) {
             notes.push(notesDB[i]);
         };
 
-        fs.writeFile("./db/db.json", JSON.stringify(notes), () => {
+        fs.writeFile((path.join(__dirname, "../db/db.json")), JSON.stringify(notes), () => {
             console.log("Deleted");
         });
 
