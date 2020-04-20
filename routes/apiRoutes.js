@@ -17,25 +17,33 @@ module.exports = function (app) {
 
     app.post('/api/notes', (req, res) => {
 
+        let notesArray = [];
+
+        const notesDB = fs.readFileSync("./db/db.json");
+
         if (notesDB.length > 0) {
-            notes = JSON.parse(notesDB);
+            notesArray = JSON.parse(notesDB);
         };
 
         const newNote = {
-            id: notes.length + 1,
+            id: notesArray.length + 1,
             title: req.body.title,
             text: req.body.text
         };
-        notes.push(newNote);
-        fs.writeFile("./db/db.json", JSON.stringify(notes), () => {
+        notesArray.push(newNote);
+        fs.writeFile("./db/db.json", JSON.stringify(notesArray), () => {
             console.log("Note Written");
         })
-        res.send(newNote);
+        res.json(newNote);
     });
 
     app.delete('/api/notes/:id', (req, res) => {
        
         const removeNote = req.params.id - 1;
+
+        const newNotes = [];
+
+        let notesDB = fs.readFileSync(("./db/db.json"));
 
         notesDB = JSON.parse(notesDB);
 
@@ -43,14 +51,14 @@ module.exports = function (app) {
 
         for (let i = 0; i < notesDB.length; i++) {
             notesDB[i].id = i + 1;
-            notes.push(notesDB[i]);
+            newNotes.push(notesDB[i]);
         };
 
-        fs.writeFile((path.join(__dirname, "../db/db.json")), JSON.stringify(notes), () => {
+        fs.writeFile((path.join(__dirname, "./db/db.json")), JSON.stringify(newNotes), () => {
             console.log("Deleted");
         });
 
-        res.json(notes);
+        res.json(newNotes);
 
     });
 
