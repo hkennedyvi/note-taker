@@ -2,6 +2,27 @@ html, body {
   height: 100%;
   margin: 0;
   padding: 0;
+  background-color: floralwhite;
+}
+
+.navbar {
+  background-color: #0f4c81;
+}
+
+.jumbotron {
+  background-color: white;
+  margin-top: 80px;
+}
+
+.btn {
+  background-color: #0f4c81;
+  color: white;
+}
+
+.btn:hover {
+  background-color: white;
+  color: #0f4c81;
+  border: 1px solid #0f4c81;
 }
 
 .save-note {
@@ -20,6 +41,7 @@ html, body {
   width: 100%;
   outline: none;
   border: none;
+  background-color: floralwhite;
 }
 
 .note-textarea {
@@ -43,6 +65,7 @@ html, body {
   border-bottom: none;
   border-bottom-right-radius: 0;
   border-bottom-left-radius: 0;
+  background-color: floralwhite;
 }
 
 .list-container {
@@ -55,6 +78,14 @@ html, body {
   border-top: none;
   border-top-right-radius: 0;
   border-top-left-radius: 0;
+}
+
+.list-group-item {
+  background-color: floralwhite;
+}
+
+.list-group-item:hover {
+  background-color: white;
 }
 
 .list-container i {
