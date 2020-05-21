@@ -14,7 +14,7 @@ Users can create and save notes, view previously saved notes, and delete saved n
 * Bootstrap 
 * Express
 
-![What it looks like](https://media.giphy.com/media/QW4HmWLBFqWuYlyYSV/giphy.gif)
+![What it looks like](https://media.giphy.com/media/Tj4TiCarcvGuGWYc91/source.mp4)
 
 
 ## Author
