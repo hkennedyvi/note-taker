@@ -1,6 +1,6 @@
 # Note Taker
 
-## Deployed App: [Here](https://jot-me-down.herokuapp.com/)
+## Deployed App: [Take me there](https://jot-me-down.herokuapp.com/)
 
 ## Description
 
@@ -14,7 +14,9 @@ Users can create and save notes, view previously saved notes, and delete saved n
 * Bootstrap 
 * Express
 
-![What it looks like](https://media.giphy.com/media/Tj4TiCarcvGuGWYc91/giphy.gif))
+### How it Looks:
+
+[](https://media.giphy.com/media/Tj4TiCarcvGuGWYc91/giphy.gif)
 
 
 ## Author
