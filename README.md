@@ -16,7 +16,7 @@ Users can create and save notes, view previously saved notes, and delete saved n
 
 ### How it Looks:
 
-[](https://media.giphy.com/media/Tj4TiCarcvGuGWYc91/giphy.gif)
+![](https://media.giphy.com/media/Tj4TiCarcvGuGWYc91/giphy.gif)
 
 
 ## Author
